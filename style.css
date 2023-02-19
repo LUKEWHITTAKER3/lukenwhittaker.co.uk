@@ -3,7 +3,20 @@
 }
 
 body {
-    background-color: #0f1014;
+    /* background-color: #0f1014; */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+}
+
+html {
+    scroll-behavior: smooth;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
 }
 
 .horizontal_center_text {
@@ -15,25 +28,27 @@ body {
     width: 100%;
     top: 50%;
     left: 0px;  
-    /* transform: translateY(-50%); */
 }
 
 .title {
-    color: #ffffff;
-    height: 70px;
-    opacity: 50%;
-    font-size: 60px;
+    position: relative;
+    top: 30%;
+    color: white;
     font-family: monospace;
-    display: inline-block;
-    text-decoration: underline white 1px;  
-    text-underline-offset: 15px;
-    transform: translateY(-80%);
+    transition: top 0.5s ease;
+    font-size: 3vw;
 }
 
 .subtitle {
-    color: white;
-    font-family: monospace;
-    transform: translateY(-200%);
+    font-family: 'Century Gothic';
+    font-size: 1.3vw;
+}
+
+.intro {
+    top: 100%;
+    font-family: 'Century Gothic';
+    transition: top 0.5s ease;
+    font-size: 1.2vw;
 }
 
 .fade_up { 
@@ -45,7 +60,7 @@ body {
 .page_down_arrow {
     position: absolute;
     left: 50%;
-    bottom: 20px;
+    bottom: 5%;
     border-bottom: 2px solid white;
     border-right: 2px solid white;
     text-align: center;
@@ -67,9 +82,10 @@ body {
 	border-top-left-radius: 2rem;
     border-bottom-right-radius: 3rem;
 	border-bottom-left-radius: 3rem;
-    transform: translateY(-20vh);
+    /* transform: translateY(-20vh); */
     transition: box-shadow .3s ease-out;
-    background-color: #1e2027;
+    background-color: #17191f;
+    overflow: hidden;
 }
 .monitor_bottom {
     margin: 0 auto;
@@ -81,7 +97,7 @@ body {
 	z-index: 1;
 	box-shadow: 5px 5px 11px rgba(0,0,0,0.25);
 	background-color: #F5F5F5;
-    transform: translateY(-20vh);
+    /* transform: translateY(-20vh); */
 }
 .monitor_stand {
 	box-shadow: 5px 5px 11px rgba(0,0,0,0.25);
@@ -92,7 +108,7 @@ body {
     aspect-ratio: 1.5;
 	background-color: #EEEEEE;
 	clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
-    transform: translateY(-20vh);
+    /* transform: translateY(-20vh); */
 }
 .monitor_stand_bottom {
 	box-shadow: 5px 5px 11px rgba(0,0,0,0.25);
@@ -102,11 +118,55 @@ body {
 	background-color: #F5F5F5;
 	border-top-right-radius: 2rem;
 	border-top-left-radius: 2rem;
-    transform: translateY(-20vh);
+    /* transform: translateY(-20vh); */
 }
 
 .monitor_main:hover {
     box-shadow: 0px 0px 50px rgb(123, 28, 187);
+}
+
+.monitor_main:hover > .title {
+    top: -100%;
+}
+
+.monitor_main:hover > .subtitle {
+    top: -100%;
+}
+
+.monitor_main:hover > .intro {
+    top: -20%;
+}
+
+.container {
+    background-color: black;
+    position: absolute;
+    width: 80%;
+    height: 50%;
+
+    border-radius: 6rem;
+    background-color: #17191f;
+    box-shadow: 0px 0px 15px black;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        opacity: 0;
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 0.5;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all .5s ease;
 }
 
 @keyframes fade_up {
