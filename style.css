@@ -1,20 +1,9 @@
+:root {
+    --monitor-width: 30%;
+}
+
 body {
     background-color: #0f1014;
-}
-
-.title {
-    color: #ffffff;
-    height: 70px;
-    opacity: 50%;
-    font-size: 60px;
-    font-family: monospace;
-    display: inline-block;
-    text-decoration: underline white 1px;  
-    text-underline-offset: 15px;
-}
-
-.subtitle {
-    color: white;
 }
 
 .horizontal_center_text {
@@ -26,7 +15,25 @@ body {
     width: 100%;
     top: 50%;
     left: 0px;  
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
+}
+
+.title {
+    color: #ffffff;
+    height: 70px;
+    opacity: 50%;
+    font-size: 60px;
+    font-family: monospace;
+    display: inline-block;
+    text-decoration: underline white 1px;  
+    text-underline-offset: 15px;
+    transform: translateY(-80%);
+}
+
+.subtitle {
+    color: white;
+    font-family: monospace;
+    transform: translateY(-200%);
 }
 
 .fade_up { 
@@ -51,10 +58,55 @@ body {
     animation: jump 1.5s infinite;
 }
     
-.star {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
+.monitor_main {
+	margin: 0 auto;
+    width: var(--monitor-width);
+    aspect-ratio: 16/9;
+	border: 20px solid white;
+	border-top-right-radius: 2rem;
+	border-top-left-radius: 2rem;
+    border-bottom-right-radius: 3rem;
+	border-bottom-left-radius: 3rem;
+    transform: translateY(-20vh);
+    transition: box-shadow .3s ease-out;
+    background-color: #1e2027;
+}
+.monitor_bottom {
+    margin: 0 auto;
+    width: calc(var(--monitor-width) + 40px);
+    aspect-ratio: 20;
+    border-bottom-right-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+	position: relative;
+	z-index: 1;
+	box-shadow: 5px 5px 11px rgba(0,0,0,0.25);
+	background-color: #F5F5F5;
+    transform: translateY(-20vh);
+}
+.monitor_stand {
+	box-shadow: 5px 5px 11px rgba(0,0,0,0.25);
+	position: relative;
+	z-index: 0;
+	margin: 0 auto;
+	width: calc(var(--monitor-width) * 0.2);
+    aspect-ratio: 1.5;
+	background-color: #EEEEEE;
+	clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+    transform: translateY(-20vh);
+}
+.monitor_stand_bottom {
+	box-shadow: 5px 5px 11px rgba(0,0,0,0.25);
+	margin: 0 auto;
+	aspect-ratio: 15;
+	width: calc(var(--monitor-width) * 0.5);
+	background-color: #F5F5F5;
+	border-top-right-radius: 2rem;
+	border-top-left-radius: 2rem;
+    transform: translateY(-20vh);
+}
+
+.monitor_main:hover {
+    box-shadow: 0px 0px 50px rgb(123, 28, 187);
 }
 
 @keyframes fade_up {
@@ -71,5 +123,14 @@ body {
     } to {
         bottom: 20px;
         opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
     }
 }
