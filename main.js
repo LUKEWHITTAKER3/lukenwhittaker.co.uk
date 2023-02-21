@@ -1,4 +1,4 @@
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
         console.log(e);
         if (e.isIntersecting) {
@@ -10,4 +10,6 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 const scrollerSections = document.querySelectorAll('.hidden');
-scrollerSections.forEach((s) => observer.observe(s));
+scrollerSections.forEach((s) => sectionObserver.observe(s));
+
+

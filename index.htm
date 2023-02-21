@@ -8,37 +8,95 @@
         <script defer src="main.js"></script>
     </head>
 
-    <body>
+    <body style = "margin:0">
         <div class="page_down_arrow"></div>
 
-        <section>
+        <section id="home">
             <div class="monitor_main">
                 <div class="horizontal_center_text title fade_up">Luke Whittaker</div>
-                <div class="horizontal_center_text title subtitle fade_up">Computer Science Undergraduate at Lancaster University</div>
+                <div class="horizontal_center_text title subtitle fade_up">
+                    Computer Science Undergraduate at Lancaster University<br><br>
+                    More...
+                </div>
                 <div class="horizontal_center_text title intro">
                     Welcome to my website :)<br><br>
                     I am a second-year BSc. Computer Science undergraduate at Lancaster University.<br><br>
-                    Scroll down to have a look at my programming portfolio (last updated 19/02/23).
+                    Scroll down to have a look at my programming portfolio (last updated 21/02/23).
                 </div>
             </div>
             <div class="monitor_stand"></div>
             <div class="monitor_stand_bottom"></div>
         </section>
             
-        <section>
-            <div class="container hidden">
-                <img src="">
+        <section id="demo_1">
+            <h1 id="projects_section_title">Recent projects</h1>
+            <div class="grid">
+                <div class="container hidden" style="--order: 1">
+                    <div class="project_img" style="background-image: url('images/code_0.png')"></div>
+                    <div class="project_title">&ltthis&gt</div>
+                    <div class="project_info">
+                        *work-in-progress, 21/02/22<br><br>
+                        This website was built with much tinkering over a few days in February 2022 as both a customisable space to develop a portfolio and also as a general exercise in web development.<br><br>
+                        A touch of native JavaScript is used but the majority of heavy-lifting is done with CSS.
+                    </div>
+                </div>
+                <div class="container hidden" style="--order: 3">
+                    <div class="project_img" style="background-image: url('images/code_1.png')"></div>
+                    <div class="project_title">&ltnetworks.py&gt</div>
+                    <div class="project_info">
+                        *work-in-progress, 21/02/22<br><br>
+                        A pure Python implementation of various networking tools including ping and traceroute using raw sockets and ICMP.<br><br>
+                        Developed as part of module on Networking.
+                    </div>
+                </div>
+                <div class="container hidden" style="--order: 1">
+                    <div class="project_img" style="background-image: url('images/code_2.png')"></div>
+                    <div class="project_title">&ltpixel_editor.java&gt</div>
+                    <div class="project_info">
+                        A 5-person group project spanning 15 weeks to develop a raster graphics editor in Java with Swing/AWT.<br><br>
+                        Supports multiple layers, draw/shape tools, transparency, PNG import/export, filters, and blur effects.
+                    </div>
+                </div>
+                <div class="container hidden" style="--order: 1">
+                    <div class="project_img" style="background-image: url('images/code_2.png')"></div>
+                    <div class="project_title">&ltfat16.c&gt</div>
+                    <div class="project_info">
+                        
+                        A complete implemtation of the FAT16 filesystem in C. A program written from scratch to read FAT16 image files by reading metadata from the root directory and following FAT chains.<br><br>
+                        Developed as part of module on Operating Systems.
+                    </div>
+                </div>
+                <div class="container hidden" style="--order: 3">
+                    <div class="project_img" style="background-image: url('images/code_3.png')"></div>
+                    <div class="project_title">&ltsolar_system.java&gt</div>
+                    <div class="project_info">
+                        A 2D animated model of our solar system written in Java with Swing/AWT, including orbiting planets, moons, and comets.<br><br>
+                        Developed as part of a module on Advanced Programming.
+                    </div>
+                </div>
+                <div class="container hidden" style="--order: 1">
+                    <div class="project_img" style="background-image: url('images/code_4.png')"></div>
+                    <div class="project_title">&ltminesweeper.java&gt</div>
+                    <div class="project_info">
+                        A re-creation of the classic puzzle game with a customisable grid size.<br><br>
+                        Developed as part of a module on Advanced Programming.
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section>
-            <div class="container hidden">
-            </div>
-        </section>
+            <!-- <div class="horizontal_slider">
+                <div class="container hidden">
+                    <div class="project_title">&ltfat16.c&gt</div>
+                </div>
+                <div class="container hidden">
+                    <div class="project_title">&ltfat16.c&gt</div>
+                </div>
+                <div class="container hidden">
+                    <div class="project_title">&ltfat16.c&gt</div>
+                </div>
+            </div> -->
 
-        <section>
-            <div class="container hidden">
-            </div>
+            
         </section>
 
     </body>
